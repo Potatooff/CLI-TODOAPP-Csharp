@@ -1,16 +1,10 @@
-﻿using System;
-using System.Globalization;
-using System.IO;
-
-
-namespace wassup
+﻿namespace wassup
 {
     class Program
     {
         static void Main() // gather everything and run!
         {
-            
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to the todo app!\n");
             MainMenu();
         }
 
@@ -41,7 +35,7 @@ namespace wassup
                         break;
                     }
                     else
-                    {break;}
+                    {Console.WriteLine("No task on the list!\n"); break;}
 
                 case "3":
                     Console.WriteLine("You choosed: Delete task");
@@ -54,7 +48,7 @@ namespace wassup
                         break;
                     }
                     else
-                    {break;}
+                    {Console.WriteLine("No task to delete!\n"); break;}
 
                 case "4":
                     Console.WriteLine("You choosed: Exit");
@@ -66,10 +60,10 @@ namespace wassup
 
         static string MainMenu()
         {
-            Console.WriteLine("1. Add task\n2. View tasks\n3. Delete task\n4. Exit");
             while (true)
             {
-                Console.Write("Enter your choice: ");
+                Console.WriteLine("1. Add task\n2. View tasks\n3. Delete task\n4. Exit\n");
+                Console.Write("\nEnter your choice: ");
 
                 string? choice = Console.ReadLine(); 
 
